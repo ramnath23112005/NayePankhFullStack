@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {
   HiBell,
-  HiBellAlert,
+  HiExclamationCircle,
   HiCalendar,
   HiBadgeCheck,
   HiUserGroup,
@@ -19,7 +19,7 @@ const iconMap = {
   certificate: { icon: HiBadgeCheck, color: 'text-purple-500', bg: 'bg-purple-100 dark:bg-purple-900/30' },
   volunteer: { icon: HiUserGroup, color: 'text-green-500', bg: 'bg-green-100 dark:bg-green-900/30' },
   info: { icon: HiInformationCircle, color: 'text-gray-500', bg: 'bg-gray-100 dark:bg-gray-800' },
-  alert: { icon: HiBellAlert, color: 'text-red-500', bg: 'bg-red-100 dark:bg-red-900/30' },
+  alert: { icon: HiExclamationCircle, color: 'text-red-500', bg: 'bg-red-100 dark:bg-red-900/30' },
   mail: { icon: HiMail, color: 'text-indigo-500', bg: 'bg-indigo-100 dark:bg-indigo-900/30' },
   default: { icon: HiBell, color: 'text-gray-500', bg: 'bg-gray-100 dark:bg-gray-800' },
 };
