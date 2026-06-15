@@ -87,7 +87,7 @@ function StatCard({ icon: Icon, label, value, suffix }) {
 
 function TestimonialCard({ name, role, text, rating }) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 min-w-[320px] md:min-w-[400px]">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 dark:border-gray-700 min-w-0 sm:min-w-[320px] md:min-w-[400px]">
       <div className="flex items-center space-x-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <HiStar

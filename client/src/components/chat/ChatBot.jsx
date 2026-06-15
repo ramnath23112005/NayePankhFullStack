@@ -161,14 +161,14 @@ export default function ChatBot() {
             </div>
 
             {messages.length === 1 && (
-              <div className="px-4 pb-2 flex flex-wrap gap-2">
+              <div className="px-4 pb-2 flex flex-wrap gap-1.5">
                 {quickActions.map((action) => {
                   const Icon = action.icon;
                   return (
                     <button
                       key={action.label}
                       onClick={() => handleSend(action.label)}
-                      className="inline-flex items-center space-x-1 px-3 py-1.5 text-xs font-medium text-green-700 dark:text-green-300 bg-green-50 dark:bg-green-900/20 rounded-full hover:bg-green-100 dark:hover:bg-green-900/40 transition-colors border border-green-200 dark:border-green-800"
+                      className="inline-flex items-center space-x-1 px-2.5 py-1.5 text-[11px] font-medium text-green-700 dark:text-green-300 bg-green-50 dark:bg-green-900/20 rounded-full hover:bg-green-100 dark:hover:bg-green-900/40 transition-colors border border-green-200 dark:border-green-800 whitespace-nowrap"
                     >
                       <Icon className="w-3.5 h-3.5" />
                       <span>{action.label}</span>

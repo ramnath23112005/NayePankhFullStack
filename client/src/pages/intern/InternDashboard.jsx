@@ -93,53 +93,56 @@ export default function InternDashboard() {
               <HiClipboardCheck className="w-5 h-5 mr-2 text-gray-400" />
               Application Status
             </h3>
-            <div className="flex items-center justify-between relative">
-              {statusSteps.map((step, idx) => {
-                const StepIcon = step.icon;
-                const isActive = idx <= currentStepIdx;
-                const isCurrent = idx === currentStepIdx;
-                const isRejected = currentStatus === 'rejected';
-                const isPast = idx < currentStepIdx;
+            <div className="overflow-x-auto pb-2 -mx-2 px-2">
+              <div className="flex items-center justify-between relative min-w-[400px] sm:min-w-0">
+                {statusSteps.map((step, idx) => {
+                  const StepIcon = step.icon;
+                  const isActive = idx <= currentStepIdx;
+                  const isCurrent = idx === currentStepIdx;
+                  const isRejected = currentStatus === 'rejected';
+                  const approvedIdx = statusSteps.findIndex((s) => s.key === 'approved');
+                  const isAfterApproved = idx >= approvedIdx;
 
-                return (
-                  <div key={step.key} className="flex flex-col items-center relative z-10">
-                    <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all ${
-                        isActive
-                          ? isCurrent && currentStatus === 'rejected'
-                            ? 'border-red-400 bg-red-50 dark:bg-red-900/20 text-red-500'
-                            : isRejected && idx >= statusSteps.findIndex((s) => s.key === 'approved')
-                              ? 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-400'
-                              : `${stepColors[step.key]} bg-white dark:bg-gray-900`
-                          : 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-400'
-                      }`}
-                    >
-                      <StepIcon className="w-5 h-5" />
+                  return (
+                    <div key={step.key} className="flex flex-col items-center relative z-10">
+                      <div
+                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 transition-all ${
+                          isActive
+                            ? isCurrent && currentStatus === 'rejected'
+                              ? 'border-red-400 bg-red-50 dark:bg-red-900/20 text-red-500'
+                              : isRejected && idx >= statusSteps.findIndex((s) => s.key === 'approved')
+                                ? 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-400'
+                                : `${stepColors[step.key]} bg-white dark:bg-gray-900`
+                            : 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-400'
+                        }`}
+                      >
+                        <StepIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      </div>
+                      <p
+                        className={`mt-2 text-[10px] sm:text-xs font-medium text-center whitespace-nowrap ${
+                          isActive && !(isRejected && isAfterApproved)
+                            ? 'text-gray-900 dark:text-white'
+                            : 'text-gray-400'
+                        }`}
+                      >
+                        {step.label}
+                      </p>
                     </div>
-                    <p
-                      className={`mt-2 text-xs font-medium text-center ${
-                        isActive && !(isRejected && keyAfterRejected(idx))
-                          ? 'text-gray-900 dark:text-white'
-                          : 'text-gray-400'
-                      }`}
-                    >
-                      {step.label}
-                    </p>
-                  </div>
-                );
-              })}
-              <div className="absolute top-6 left-0 right-0 h-0.5 bg-gray-200 dark:bg-gray-700 -translate-y-1/2 z-0">
-                <motion.div
-                  initial={{ width: '0%' }}
-                  animate={{
-                    width: currentStatus === 'rejected'
-                      ? `${((statusSteps.findIndex((s) => s.key === 'under-review') + 1) / (statusSteps.length - 1)) * 100}%`
-                      : `${(currentStepIdx / (statusSteps.length - 1)) * 100}%`,
-                  }}
-                  className={`h-full transition-all ${
-                    currentStatus === 'rejected' ? 'bg-red-500' : 'bg-green-500'
-                  }`}
-                />
+                  );
+                })}
+                <div className="absolute top-5 sm:top-6 left-0 right-0 h-0.5 bg-gray-200 dark:bg-gray-700 -translate-y-1/2 z-0">
+                  <motion.div
+                    initial={{ width: '0%' }}
+                    animate={{
+                      width: currentStatus === 'rejected'
+                        ? `${((statusSteps.findIndex((s) => s.key === 'under-review') + 1) / (statusSteps.length - 1)) * 100}%`
+                        : `${(currentStepIdx / (statusSteps.length - 1)) * 100}%`,
+                    }}
+                    className={`h-full transition-all ${
+                      currentStatus === 'rejected' ? 'bg-red-500' : 'bg-green-500'
+                    }`}
+                  />
+                </div>
               </div>
             </div>
           </motion.div>

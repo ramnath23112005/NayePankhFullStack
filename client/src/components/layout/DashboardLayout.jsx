@@ -79,7 +79,14 @@ export default function DashboardLayout() {
               <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
             </button>
 
-            {/* User Info */}
+            {/* User Avatar (always visible) */}
+            <div className="flex sm:hidden items-center">
+              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                {user?.name?.charAt(0)?.toUpperCase() || 'U'}
+              </div>
+            </div>
+
+            {/* User Info (desktop) */}
             <div className="hidden sm:flex items-center space-x-2 pl-2 border-l border-gray-200 dark:border-gray-700">
               <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                 {user?.name?.charAt(0)?.toUpperCase() || 'U'}
