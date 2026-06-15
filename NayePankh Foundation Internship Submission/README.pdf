@@ -1,0 +1,75 @@
+README - NayePankh NGO Management Portal
+=========================================
+
+Installation Steps:
+1. Clone the repository:
+   git clone https://github.com/ramnath23112005/NayePankhFullStack.git
+2. Navigate to the project directory:
+   cd "full Stack"
+3. Install all dependencies (root, server, client):
+   npm run install-all
+   (Alternatively: npm install && cd server && npm install && cd ../client && npm install)
+4. Set up environment variables:
+   - Copy server/.env.example to server/.env (or use the provided .env)
+   - Required: MONGODB_URI, JWT_SECRET, JWT_EXPIRE, EMAIL_HOST, EMAIL_PORT,
+     EMAIL_USER, EMAIL_PASS, FRONTEND_URL
+5. Ensure MongoDB is running (local or Atlas cluster)
+
+How to Run the Project:
+1. Start both server and client together:
+   npm run dev
+2. Or start them separately:
+   - Server: npm run server (runs on http://localhost:5000)
+   - Client: npm run client (runs on http://localhost:3000)
+3. Open browser at http://localhost:3000
+4. Register a new account or login with existing credentials
+5. For admin access, update user role in the database
+
+Project Structure:
+full Stack/
+|-- package.json                     # Root orchestrator
+|-- render.yaml                      # Render deployment config
+|-- client/                          # React Frontend
+|   |-- public/
+|   |   |-- index.html
+|   |-- src/
+|   |   |-- App.js                   # Router + layouts + auth guards
+|   |   |-- index.js                 # React entry
+|   |   |-- context/
+|   |   |   |-- AuthContext.js       # Auth state management
+|   |   |   |-- ThemeContext.js      # Dark mode toggle
+|   |   |-- components/
+|   |   |   |-- common/              # Loader, StatCard, Skeleton
+|   |   |   |-- layout/             # Navbar, Footer, Sidebar, DashboardLayout
+|   |   |   |-- chat/               # ChatBot widget
+|   |   |-- pages/
+|   |       |-- public/             # Home, About, Programs, Events, Contact,
+|   |       |                       # Login, Register, ForgotPassword,
+|   |       |                       # VolunteerRegistration, InternshipApplication
+|   |       |-- volunteer/          # Dashboard, Profile, MyEvents, Certificates
+|   |       |-- intern/             # Dashboard, ApplicationStatus, Tasks
+|   |       |-- admin/              # Dashboard, Volunteers, Internships, Events,
+|   |                               # Certificates, Analytics, Settings
+|-- server/                          # Express Backend
+|   |-- server.js                    # Main entry point
+|   |-- config/db.js                 # MongoDB connection
+|   |-- models/                      # User, Volunteer, Internship, Event,
+|   |                               # Certificate, Notification, Registration
+|   |-- controllers/                 # auth, volunteer, internship, event,
+|   |                               # certificate, notification, analytics, chat
+|   |-- routes/                      # API route definitions
+|   |-- middleware/                  # auth (JWT + roles), upload, validate
+|   |-- utils/                       # emailer, helpers
+
+Usage Instructions:
+1. Landing Page: Browse the public homepage with animated stats, program cards,
+   and testimonials carousel
+2. Register: Sign up as a Volunteer or Intern (Admins are assigned manually)
+3. Volunteer Flow: Complete your profile -> Get approved by admin -> Register for
+   events -> Earn certificates
+4. Intern Flow: Submit internship application -> Track application status -> Receive
+   tasks from admin -> Update task progress -> Get certificate on completion
+5. Admin Flow: Manage volunteers (approve/reject) -> Manage internships (review,
+   assign tasks) -> Create events -> Generate certificates -> View analytics
+6. Chatbot: Click the floating chat icon on any public page for quick information
+7. Dark Mode: Toggle theme using the sun/moon icon in the navbar

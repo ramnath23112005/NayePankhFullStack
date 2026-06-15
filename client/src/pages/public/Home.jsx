@@ -266,7 +266,7 @@ export default function Home() {
           <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-green-300 rounded-full blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-36">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -282,7 +282,7 @@ export default function Home() {
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="text-lg md:text-xl text-green-100 mb-8 leading-relaxed max-w-2xl"
+              className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl"
             >
               NayePankh Foundation is dedicated to creating sustainable change through
               community-driven programs, education, healthcare, and environmental

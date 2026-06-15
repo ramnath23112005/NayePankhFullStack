@@ -1,0 +1,4 @@
+I hereby declare that this project, NayePankh NGO Management Portal, is my original work and has been created and submitted by [Your Name] for the NayePankh Foundation Internship Application (Full Stack Development).
+
+GitHub: https://github.com/ramnath23112005/NayePankhFullStack
+Live Demo: https://naye-pankh-full-stack.vercel.app

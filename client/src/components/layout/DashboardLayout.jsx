@@ -40,8 +40,8 @@ export default function DashboardLayout() {
       {/* Main Content */}
       <div className="lg:ml-64 pt-16 transition-all duration-300">
         {/* Top Bar */}
-        <header className="sticky top-16 z-30 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+        <header className="sticky top-16 z-30 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <button
               onClick={() => setSidebarOpen(true)}
               className="lg:hidden p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -49,12 +49,12 @@ export default function DashboardLayout() {
             >
               <HiOutlineMenu className="w-5 h-5" />
             </button>
-            <h1 className="text-lg font-semibold text-gray-900 dark:text-white">
+            <h1 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
               {pageTitle}
             </h1>
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             {/* Search Bar */}
             <div className="hidden sm:flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg px-3 py-1.5">
               <HiSearch className="w-4 h-4 text-gray-400 mr-2" />
@@ -105,7 +105,7 @@ export default function DashboardLayout() {
         </header>
 
         {/* Page Content */}
-        <main className="p-4 sm:p-6 lg:p-8">
+        <main className="p-3 sm:p-6 lg:p-8">
           <Outlet />
         </main>
 

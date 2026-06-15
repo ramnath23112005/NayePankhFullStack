@@ -598,7 +598,7 @@ export default function VolunteerRegistration() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-6 md:p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-5 sm:p-6 md:p-8">
             {renderStepIndicator()}
 
             <AnimatePresence mode="wait">

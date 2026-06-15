@@ -1,0 +1,54 @@
+Project Overview - NayePankh Foundation Internship Submission
+=============================================================
+
+Project Title: NayePankh NGO Management Portal
+
+Internship Applied For: Full Stack Development
+
+Objective:
+To build a comprehensive full-stack NGO management web application for NayePankh
+Foundation that serves as a centralized portal for managing volunteers, internship
+applicants, events, certificates, notifications, and analytics. The platform
+supports three user roles — Admin, Volunteer, and Intern — each with a tailored
+dashboard and specific capabilities to streamline NGO operations.
+
+Technologies Used:
+- Frontend: React 18, React Router v6, Tailwind CSS, Framer Motion, Recharts,
+  Axios, React Hot Toast, React Icons
+- Backend: Node.js, Express 4, MongoDB + Mongoose, JWT Authentication, bcryptjs,
+  express-validator, Multer, Nodemailer, PDFKit
+- Deployment: Vercel (frontend), Render (backend API)
+- Tools: Git, npm, concurrently
+
+Features:
+- Role-based authentication (Admin, Volunteer, Intern) with JWT tokens
+- Password reset flow via email
+- Volunteer management with approval workflow, profile completion tracking, CSV export
+- Internship application system with department selection, task management, progress tracking
+- Event management with CRUD, registration, capacity tracking, attendance marking
+- Certificate generation with branded PDF layout, download and email delivery
+- Notification system with role-targeted messages, read/unread tracking
+- Analytics dashboard with charts (volunteer growth, event participation, internship stats)
+- AI-powered chatbot with quick actions and conversation history
+- Dark mode support with system preference detection
+- Responsive design with mobile hamburger menu
+- Animated UI with Framer Motion, lazy loading, skeleton states
+
+Challenges Faced:
+- Implementing complex MongoDB aggregation pipelines for analytics dashboard
+  (monthly volunteer growth, popular events by registration count)
+- Role-based access control across both frontend routes and backend middleware
+- PDF certificate generation with custom branding layout using PDFKit
+- File upload handling for resumes, cover letters, and event banners via Multer
+- Deployment coordination between Vercel (static frontend) and Render (Node API)
+- Ensuring responsive dark mode theming across all components
+
+Future Improvements:
+- Add real-time notifications using WebSockets (Socket.io)
+- Implement payment gateway integration for donations
+- Add email template system with HTML formatting
+- Build a mobile app version using React Native
+- Add multi-language support (Hindi + English)
+- Implement data backup and export (full DB dump)
+- Add OAuth login (Google, GitHub)
+- Add unit and integration tests
