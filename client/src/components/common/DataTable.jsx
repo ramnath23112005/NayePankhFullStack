@@ -72,9 +72,9 @@ export default function DataTable({
   return (
     <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Toolbar */}
-      <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex flex-wrap items-center justify-between gap-4">
+      <div className="px-4 sm:px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
         {searchable && (
-          <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg px-3 py-1.5 flex-1 max-w-xs">
+          <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg px-3 py-1.5 flex-1 min-w-0 max-w-xs">
             <HiSearch className="w-4 h-4 text-gray-400 mr-2" />
             <input
               type="text"
@@ -176,7 +176,7 @@ export default function DataTable({
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="px-6 py-3 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+          <div className="px-4 sm:px-6 py-3 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Page {currentPage} of {totalPages}
             <span className="ml-1">({sorted.length} records)</span>

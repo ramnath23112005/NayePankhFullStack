@@ -59,13 +59,9 @@
     @apply px-4 sm:px-6 lg:px-8;
   }
 
-  /* Prevent text size adjustment on orientation change */
+  /* Prevent text size adjustment on orientation change + Smooth scrolling */
   html {
     -webkit-text-size-adjust: 100%;
-  }
-
-  /* Smooth scrolling */
-  html {
     scroll-behavior: smooth;
   }
 

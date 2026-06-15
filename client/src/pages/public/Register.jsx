@@ -129,7 +129,7 @@ export default function Register() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5" noValidate>
             {/* Name */}
             <div>
               <label

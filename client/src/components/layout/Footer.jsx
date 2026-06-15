@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter / CTA */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
               Stay Updated
             </h3>

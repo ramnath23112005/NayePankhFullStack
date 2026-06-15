@@ -35,7 +35,7 @@ export default function ForgotPassword() {
             </p>
           </div>
           {!sent ? (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               <div>
                 <label className="label">Email Address</label>
                 <div className="relative">
