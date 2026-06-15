@@ -99,7 +99,7 @@ export default function Contact() {
           >
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-6xl font-extrabold mb-4"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4"
             >
               Contact <span className="text-green-200">Us</span>
             </motion.h1>

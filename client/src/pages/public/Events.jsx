@@ -107,7 +107,7 @@ export default function Events() {
           >
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-6xl font-extrabold mb-4"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4"
             >
               Events & <span className="text-green-200">Activities</span>
             </motion.h1>
@@ -177,7 +177,7 @@ export default function Events() {
                     variants={fadeUp}
                     className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 group hover:shadow-xl transition-all"
                   >
-                    <div className={`h-40 flex items-center justify-center ${
+                    <div className={`h-32 sm:h-40 flex items-center justify-center ${
                       past
                         ? 'bg-gray-400 dark:bg-gray-600'
                         : 'bg-gradient-to-br from-green-400 to-green-700'
@@ -189,11 +189,11 @@ export default function Events() {
                         </span>
                       )}
                     </div>
-                    <div className="p-5">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    <div className="p-4 sm:p-5">
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
                         {event.title}
                       </h3>
-                      <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                      <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-3 sm:mb-4">
                         <div className="flex items-center">
                           <HiCalendar className="w-4 h-4 mr-2 flex-shrink-0" />
                           {new Date(event.date).toLocaleDateString('en-US', {

@@ -275,7 +275,7 @@ export default function Home() {
           >
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-6"
             >
               Empowering Communities,{' '}
               <span className="text-green-200">Transforming Lives</span>
@@ -288,16 +288,16 @@ export default function Home() {
               community-driven programs, education, healthcare, and environmental
               initiatives. Join us in building a better tomorrow.
             </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
                 onClick={() => handleCTAClick('/volunteer/register')}
-                className="px-8 py-3.5 bg-white text-green-700 font-semibold rounded-xl hover:bg-green-50 transition-colors shadow-lg"
+                className="w-full sm:w-auto px-8 py-3.5 bg-white text-green-700 font-semibold rounded-xl hover:bg-green-50 transition-colors shadow-lg text-center"
               >
                 Join as Volunteer
               </button>
               <button
                 onClick={() => handleCTAClick('/internship/apply')}
-                className="px-8 py-3.5 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-400 transition-colors border-2 border-green-400 shadow-lg"
+                className="w-full sm:w-auto px-8 py-3.5 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-400 transition-colors border-2 border-green-400 shadow-lg text-center"
               >
                 Apply for Internship
               </button>
@@ -552,16 +552,16 @@ export default function Home() {
               Whether you want to volunteer your time, apply for an internship, or
               partner with us, there are countless ways to contribute to the cause.
             </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <button
                 onClick={() => handleCTAClick('/volunteer/register')}
-                className="px-8 py-3.5 bg-white text-green-700 font-semibold rounded-xl hover:bg-green-50 transition-colors shadow-lg"
+                className="w-full sm:w-auto px-8 py-3.5 bg-white text-green-700 font-semibold rounded-xl hover:bg-green-50 transition-colors shadow-lg text-center"
               >
                 Get Started Today
               </button>
               <Link
                 to="/contact"
-                className="px-8 py-3.5 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-400 transition-colors border-2 border-green-400"
+                className="w-full sm:w-auto px-8 py-3.5 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-400 transition-colors border-2 border-green-400 text-center"
               >
                 Contact Us
               </Link>

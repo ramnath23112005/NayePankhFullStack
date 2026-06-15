@@ -98,7 +98,7 @@ function ChipSelect({ options, selected, onChange, label }) {
             key={opt}
             type="button"
             onClick={() => handleToggle(opt)}
-            className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
+            className={`px-3 py-2 sm:py-1.5 text-sm rounded-full border transition-colors min-h-[40px] sm:min-h-0 ${
               selected.includes(opt)
                 ? 'bg-green-600 text-white border-green-600'
                 : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-300 dark:border-gray-600 hover:border-green-400'
